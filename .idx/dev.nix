@@ -4,9 +4,11 @@
   # Which nixpkgs channel to use.
   channel = "stable-23.11"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
+  services.docker.enable = true;
   packages = [
     pkgs.zulu17
     pkgs.maven
+    pkgs.docker
   ];
   # Sets environment variables in the workspace
   env = {};
