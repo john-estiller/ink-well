@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  inkwell:
+    build: . 
+    ports:
+      - "8080:8080"
+    depends_on:
+      - sqlitedb
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:sqlite://sqlitedb/inkwell.db
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.sqlite.JDBC
+  sqlitedb:
+    image: keinos/sqlite3
+    volumes:
+      - ./db:/data 
+    environment:
+      - SQLITE_DATABASE=inkwell.db
