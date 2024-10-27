@@ -1,27 +1,44 @@
 package com.example.inkwell.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Category") // Optional: Specify table name if different from class name
 public class Category {
-    private int category_id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "category_id") // Optional: Specify column name
+    private int categoryId;
+
+    @Column(name = "name", nullable = false) // Optional: Specify column name and constraints
     private String name;
 
+    // Constructors, Getters, and Setters
+
     public Category() {
+        // Default constructor
     }
 
-    public Category(int category_id, String name) {
+    public Category(String name) {
         this.name = name;
-        this.category_id = category_id;
     }
 
-    public int getId() {
-        return this.category_id;
+    public Category(int categoryId, String name) {
+        this.categoryId = categoryId;
+        this.name = name;
     }
 
-    public void setId(int category_id) {
-        this.category_id = category_id;
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
