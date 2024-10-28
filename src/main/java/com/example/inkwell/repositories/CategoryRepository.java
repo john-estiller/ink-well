@@ -1,10 +1,11 @@
 package com.example.inkwell.repositories;
 
-import com.example.inkwell.models.Category; // Replace with your entity
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.example.inkwell.entity.*;
+
 @Repository
-public interface CategoryRepository extends JpaRepository<Category, Integer> {
+public interface CategoryRepository extends JpaRepository<CategoryEntity, Integer> {
     // Add custom query methods if needed
 }
