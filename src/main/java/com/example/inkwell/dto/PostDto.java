@@ -13,7 +13,7 @@ public class PostDto {
     private int postId;
     private String title;
     private String content;
-    private int authorId;
+    private UserDto author;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }
