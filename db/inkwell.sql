@@ -58,3 +58,10 @@ INSERT INTO User (username, email, password) VALUES ('john_doe', 'john.doe@examp
 INSERT INTO User (username, email, password) VALUES ('jane_smith', 'jane.smith@example.com', 'password123');
 INSERT INTO User (username, email, password) VALUES ('adobo_pusit', 'adobo.pusit@example.com', 'password123');
 INSERT INTO User (username, email, password) VALUES ('water_jug', 'water.jug@example.com', 'password123');
+
+ INSERT INTO Post (title, content, author_id) VALUES
+  ('My First Post', 'This is my very first post on this platform!', 1),
+  ('Exploring the City', 'Today I went on an adventure and...', 2),
+  ('Delicious Dinner Recipe', 'Check out this amazing recipe I tried...', 3),
+  ('Saving for a House', 'Tips and tricks for saving for a down payment...', 4),
+  ('Morning Workout Routine', 'Start your day right with this quick workout...', 1);
